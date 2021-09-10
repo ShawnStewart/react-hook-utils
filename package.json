@@ -1,0 +1,29 @@
+{
+  "name": "react-hook-utils",
+  "version": "1.0.0",
+  "description": "Useful utility React hooks!",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "author": {
+    "name": "Shawn Stewart",
+    "url": "https://shawnstewart.me"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.2"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+  }
+}
