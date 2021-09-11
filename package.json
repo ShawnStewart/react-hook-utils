@@ -1,5 +1,5 @@
 {
-  "name": "react-hook-utils",
+  "name": "shawnstewart-react-hook-utils",
   "version": "1.0.0",
   "description": "Useful utility React hooks!",
   "main": "lib/cjs/index.js",
