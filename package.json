@@ -5,16 +5,22 @@
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
+  "files": [
+    "lib/"
+  ],
   "author": {
     "name": "Shawn Stewart",
     "url": "https://shawnstewart.me"
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
+    "jest": "^27.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
   },
   "peerDependencies": {
@@ -23,7 +29,8 @@
   },
   "scripts": {
     "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs"
+    "build:esm": "tsc -p tsconfig-build.json",
+    "build:cjs": "tsc -p tsconfig-build.json --module commonjs --outDir lib/cjs",
+    "test": "jest"
   }
 }
