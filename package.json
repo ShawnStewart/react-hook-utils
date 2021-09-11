@@ -31,6 +31,7 @@
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -p tsconfig-build.json",
     "build:cjs": "tsc -p tsconfig-build.json --module commonjs --outDir lib/cjs",
+    "build:clean": "rm -rf lib/ && yarn build",
     "test": "jest"
   }
 }
