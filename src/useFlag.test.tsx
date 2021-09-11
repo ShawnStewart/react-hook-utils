@@ -73,22 +73,40 @@ describe('useFlag', () => {
         expect(valueNode?.textContent).toBe('false');
     });
 
-    it('[4] toggle function uses argument', () => {
+    it('[4] toggling true only sets true', () => {
         act(() => {
             render(<UseFlagTestComponent />, container);
         });
-        const trueButton = container?.querySelector("[data-testid='set-true'");
-        const falseButton = container?.querySelector("[data-testid='set-false'");
+        const button = container?.querySelector("[data-testid='set-true'");
         const valueNode = container?.querySelector("[data-testid='value'");
         expect(valueNode?.textContent).toBe('false');
 
         act(() => {
-            trueButton?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+            button?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
         });
         expect(valueNode?.textContent).toBe('true');
 
         act(() => {
-            falseButton?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+            button?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        });
+        expect(valueNode?.textContent).toBe('true');
+    });
+
+    it('[5] toggling false only sets false', () => {
+        act(() => {
+            render(<UseFlagTestComponent defaultValue={true} />, container);
+        });
+        const button = container?.querySelector("[data-testid='set-false'");
+        const valueNode = container?.querySelector("[data-testid='value'");
+        expect(valueNode?.textContent).toBe('true');
+
+        act(() => {
+            button?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+        });
+        expect(valueNode?.textContent).toBe('false');
+
+        act(() => {
+            button?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
         });
         expect(valueNode?.textContent).toBe('false');
     });
