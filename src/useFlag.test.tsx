@@ -44,22 +44,22 @@ describe('useFlag', () => {
         act(() => {
             render(<UseFlagTestComponent />, container);
         });
-        expect(container?.querySelector("[data-testid='value'")?.textContent).toBe('false');
+        expect(container?.querySelector("[data-testid='value']")?.textContent).toBe('false');
     });
 
     it('[2] uses defaultValue argument', () => {
         act(() => {
             render(<UseFlagTestComponent defaultValue={true} />, container);
         });
-        expect(container?.querySelector("[data-testid='value'")?.textContent).toBe('true');
+        expect(container?.querySelector("[data-testid='value']")?.textContent).toBe('true');
     });
 
     it('[3] toggle function flips state', () => {
         act(() => {
             render(<UseFlagTestComponent />, container);
         });
-        const button = container?.querySelector("[data-testid='toggle'");
-        const valueNode = container?.querySelector("[data-testid='value'");
+        const button = container?.querySelector("[data-testid='toggle']");
+        const valueNode = container?.querySelector("[data-testid='value']");
         expect(valueNode?.textContent).toBe('false');
 
         act(() => {
@@ -77,8 +77,8 @@ describe('useFlag', () => {
         act(() => {
             render(<UseFlagTestComponent />, container);
         });
-        const button = container?.querySelector("[data-testid='set-true'");
-        const valueNode = container?.querySelector("[data-testid='value'");
+        const button = container?.querySelector("[data-testid='set-true']");
+        const valueNode = container?.querySelector("[data-testid='value']");
         expect(valueNode?.textContent).toBe('false');
 
         act(() => {
@@ -96,8 +96,8 @@ describe('useFlag', () => {
         act(() => {
             render(<UseFlagTestComponent defaultValue={true} />, container);
         });
-        const button = container?.querySelector("[data-testid='set-false'");
-        const valueNode = container?.querySelector("[data-testid='value'");
+        const button = container?.querySelector("[data-testid='set-false']");
+        const valueNode = container?.querySelector("[data-testid='value']");
         expect(valueNode?.textContent).toBe('true');
 
         act(() => {
