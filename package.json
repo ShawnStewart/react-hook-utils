@@ -1,6 +1,6 @@
 {
   "name": "shawnstewart-react-hook-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Useful utility React hooks!",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -24,10 +24,12 @@
     "typescript": "^4.4.2"
   },
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^16.0.0 || 17.0.0"
   },
   "scripts": {
+    "dev": "cd example/ && yarn start",
+    "dev:install": "cd example/ && yarn add link:.. --force",
+    "dev:clean": "yarn build:clean && yarn dev",
     "build": "yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -p tsconfig-build.json",
     "build:cjs": "tsc -p tsconfig-build.json --module commonjs --outDir lib/cjs",
