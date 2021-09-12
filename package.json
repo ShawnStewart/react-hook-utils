@@ -1,6 +1,6 @@
 {
   "name": "shawnstewart-react-hook-utils",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "description": "Useful utility React hooks!",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
