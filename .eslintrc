@@ -5,10 +5,12 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:react-hooks/recommended"
   ],
   "plugins": [
     "@typescript-eslint",
-    "prettier"
+    "prettier",
+    "react-hooks"
   ]
 }

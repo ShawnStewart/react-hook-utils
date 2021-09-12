@@ -6,7 +6,7 @@ export const useTimeout = (callback: () => void, delay: number): { set: () => vo
 
     useEffect(() => {
         callbackRef.current = callback;
-    }, []);
+    }, [callback]);
 
     const set = useCallback(() => {
         timeoutRef.current = setTimeout(() => callbackRef.current(), delay);
