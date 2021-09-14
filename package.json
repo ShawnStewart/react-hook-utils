@@ -35,10 +35,9 @@
     "react": "^16.0.0 || ^17.0.0"
   },
   "scripts": {
-    "dev": "cd example/ && yarn start",
-    "dev:install": "cd example/ && yarn add link:.. --force",
+    "dev": "yarn --prod && cd example/ && yarn add link:.. --force && yarn start",
     "dev:clean": "yarn build:clean && yarn dev",
-    "build": "yarn build:esm && yarn build:cjs",
+    "build": "yarn && yarn build:esm && yarn build:cjs",
     "build:esm": "tsc -p tsconfig-build.json",
     "build:cjs": "tsc -p tsconfig-build.json --module commonjs --outDir lib/cjs",
     "build:clean": "rm -rf lib/ && yarn build",
