@@ -1,6 +1,6 @@
 {
   "name": "shawnstewart-react-hook-utils",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Useful utility React hooks!",
   "repository": "https://github.com/ShawnStewart/react-hook-utils",
   "main": "lib/cjs/index.js",
